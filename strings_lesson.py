@@ -12,3 +12,4 @@ print(student_name_1)
 emoji = " 🐮 "
 print (emoji)
 
+

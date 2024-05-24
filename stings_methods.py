@@ -5,3 +5,4 @@ user_name = input(MSG_INPUT_FIRST_NAME)
 user_last_name = input(MSG_INPUT_LAST_NAME)
 
 print(user_first_name)
+
