@@ -15,4 +15,3 @@ meat_count = recipe.count("мясо")
 print(f"кількість слів 'мясо' у рецепті: {meat_count}")
 
 print(header_footer)
-
