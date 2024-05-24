@@ -7,9 +7,5 @@ print(student_name_1)
 print(student_name_1)
 print(student_name_1)
 
-
-
 emoji = " 🐮 "
-print (emoji)
-
-
+print(emoji)

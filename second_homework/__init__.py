@@ -1,5 +1,3 @@
-print('header_footer')
-
 header_footer = "~" * 50
 print(header_footer)
 
