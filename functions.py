@@ -8,14 +8,9 @@ print(html_user)
 
 
 # geometry_function
-def rectangle_calculation(length, width):
-    length = int(length)
-    width = int(width)
-    return length * width
+def count_square(length, width):
+    result = length * width
+    return result
 
-
-length = input("Введіть довжину прямокутника:")
-width = input("Введіть ширину прямокутника:")
-
-result = rectangle_calculation(length, width)
-print(f"Площа прямокутника: {result}")
+area = count_square(length=10, width=5)
+print(f"Площа прямокутника: {area}")
