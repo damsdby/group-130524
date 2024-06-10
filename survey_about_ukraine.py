@@ -10,7 +10,10 @@ greet_message = "<h1>Вас вітає щоденна вікторина</h1>"
 def main():
     put_html(greet_message)
     total_score = 0
+
     user_name = input_pw("Введіть ваше ім'я:").title()
+    put_text(f"Вітаємо, {user_name}!")
+
     question_one = input_pw("Яка дата народження Наполеона Буонапарте?")
     if question_one == "15.08.1796":
         total_score += 1
@@ -36,7 +39,7 @@ def main():
 
     put_html(f"Кількість балів становить: {total_score}")
     if total_score == 5:
-        img = open("five_stars", "rb").read()
+        img = open("five_stars.jpeg", "rb").read()
         put_image(img, width="500px")
 
     run_js('setTimeout(function(){location.reload();}, 6000)')
