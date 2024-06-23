@@ -17,7 +17,7 @@ user_rec = ["Так, рекомендую"]
 user_not_rec = ["Ні, не рекомендую"]
 user_variaty = user_rec + user_not_rec
 
-reviews_info = ["user_name", "film_name", "film_review_slider", "film_recommendation"]
+reviews_info = []
 
 def main():
     put_html("<h1>Вас вітає аналітика фильмів!</h1>")
@@ -42,6 +42,15 @@ def main():
         img = open("five_stars.jpeg", "rb").read()
         put_image(img, width="500px")
     run_js('setTimeout(function(){location.reload();}, 4000)')
+
+    reviews_info.append({
+        "ім'я_користувача": user_name,
+        "назва_фільму": film_name,
+        "жанр": film_genre_option,
+        "оцінка_від_1_до_10": film_review_slider,
+        "відгук": film_review,
+        "рекомендація": film_recommendation
+    })
 
 
 
