@@ -18,10 +18,10 @@ data_second = responce_second.json()
         #print(f"{user['firstName']}{user['lastName']}")
 
 
-users_28 = [f"{user['firstName']} {user['lastName']}"
+users_age_special = [f"{user['firstName']} {user['lastName']}"
             for user in data_second['users']
             if user['age'] is 28]
-for user in users_28:
+for user in users_age_special:
     print(user)
 
 
