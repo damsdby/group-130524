@@ -13,7 +13,7 @@ def get_zoo_data() -> dict:
 
 
 def get_zoo_details(zoo_data: dict) -> dict:
-    result = []
+    result = {}
     result["monthly_price_for_poison_animals"] = 0
     result["animals_from_africa"] = 0
 
