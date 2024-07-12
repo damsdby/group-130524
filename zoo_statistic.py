@@ -18,7 +18,7 @@ def get_zoo_details(zoo_data: dict) -> dict:
     result["animals_from_africa"] = 0
 
     for animal in zoo_data:
-        if animal["poison"].lower() == "так":
+        if animal["poison"].lower() == "True":
             result["monthly_price_for_poison_animals"] += int(animal["monthlyprice"])
 
 
