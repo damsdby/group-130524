@@ -22,3 +22,4 @@ class Auto:
 auto1 = Auto(auto_name='Audi', producer='Audi AG', gasoline_consumption=6.5)
 auto2 = Auto(auto_name='BMW', producer='BMW AG', gasoline_consumption=6.8)
 auto3 = Auto(auto_name='Volkswagen', producer='Volkswagen Group', gasoline_consumption=4.5)
+
