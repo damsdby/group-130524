@@ -13,8 +13,6 @@ class Auto:
         def __str__(self) -> str:
             return f'<Auto called  {self.auto_name}, produced by {self.producer} >'
 
-        __repr__ = __str__
-
         def __repr__(self) -> str:
             return f'<auto called {self.auto_name},has  {self.mileage} km mileage >'
 
