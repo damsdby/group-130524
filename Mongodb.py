@@ -2,7 +2,7 @@ from pymongo.mongo_client import MongoClient
 
 from config import USER_NAME, PASSWORD
 
-uri = F"mongodb+srv://{USER_NAME}:{PASSWORD}>@hillel1.pbl2t.mongodb.net/?retryWrites=true&w=majority&appName=hillel1"
+uri = f"mongodb+srv://{USER_NAME}:{PASSWORD}>@hillel1.pbl2t.mongodb.net/?retryWrites=true&w=majority&appName=hillel1"
 
 # Create a new client and connect to the server
 client = MongoClient(uri)
