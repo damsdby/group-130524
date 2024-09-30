@@ -27,7 +27,7 @@ def move_zero_values_to_the_end(*lists: list):
         not_zero_values = []
 
         for value in lst:
-            if value is 0:
+            if value == 0 and not isinstance(value, bool):
                 zero_values.append(value)
             else:
                 not_zero_values.append(value)
