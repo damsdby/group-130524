@@ -6,13 +6,13 @@ not_even_numbers = [1, 1, 3, 13, 22, 5, 17]
 
 def find_max_even(numbers: list[int]) -> int:
     """
-this function finding the largest even number in list and returning it
-    :param numbers:A list of integers from which to find the largest even number
-    :return: the largest even number from list and none in the case that there are no such numbers
+    This function finds the largest even number in a list and returns it.
+    :param numbers: A list of integers from which to find the largest even number.
+    :return: The largest even number from the list, or None if no even numbers exist.
     """
     max_number = None
     for number in numbers:
-        if number / 2 == number // 2:
+        if number % 2 == 0:
             if max_number is None or number > max_number:
                 max_number = number
 
@@ -21,11 +21,12 @@ this function finding the largest even number in list and returning it
 
 def find_max_three_numbers(three_numbers: list[int]) -> tuple[int, int, int]:
     """
-this function finding three biggest numbers in list and returning it
-    :param three_numbers: list that contains of int numbers, will find three largest of them
-    :return: three largest int type numbers
+    This function finds three largest unique numbers in a list and returns them.
+    :param three_numbers: A list of integers from which to find the three largest unique numbers.
+    :return: A tuple containing the three largest unique integers from the list.
     """
-    sort_numbers = sorted(three_numbers, reverse=True)
+    unique_numbers = list(set(three_numbers))
+    sort_numbers = sorted(unique_numbers, reverse=True)
     return tuple(sort_numbers[:3])
 
 
