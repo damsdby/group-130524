@@ -10,13 +10,8 @@ def find_max_even(numbers: list[int]) -> int:
     :param numbers: A list of integers from which to find the largest even number.
     :return: The largest even number from the list, or None if no even numbers exist.
     """
-    max_number = None
-    for number in numbers:
-        if number % 2 == 0:
-            if max_number is None or number > max_number:
-                max_number = number
-
-    return max_number
+    even_numbers = [number for number in numbers if number % 2 == 0]
+    return max(even_numbers)
 
 
 def find_max_three_numbers(three_numbers: list[int]) -> tuple[int, int, int]:
