@@ -67,3 +67,5 @@ dep_workers_csv = sum(get_csv().values())
 print(dep_workers_json)
 print(dep_workers_csv)
 print(factory)
+
+
