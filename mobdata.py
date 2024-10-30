@@ -31,7 +31,7 @@ class MobPhone:
 
     @property
     def size_w(self) -> int:
-        """Gets phone width."""
+        """Gets phone widt"""
         return self._size_w
 
     @size_w.setter
@@ -47,7 +47,7 @@ class MobPhone:
 
     @property
     def price(self) -> float:
-        """Gets phone price."""
+        """Gets phone price"""
         return self._price
 
     @price.setter
