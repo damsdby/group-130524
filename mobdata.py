@@ -1,7 +1,7 @@
 class MobPhone:
     def __init__(self, brand: str, size_h: int, size_w: int, price: float):
         """
-        Initializes a MobPhone class that contains brand, size, and price.
+        Initializes a MobPhone class that contains brand, size, and price
 
         :param brand: phone brand
         :param size_h: Height of the phone in mm
