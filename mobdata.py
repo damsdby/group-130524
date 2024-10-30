@@ -1,19 +1,16 @@
 class MobPhone:
     def __init__(self, brand: str, size_h: int, size_w: int, price: float):
         """
-        Initializes a MobPhone class that contains  brand, size, and price
+        Initializes a MobPhone class that contains brand, size, and price.
 
-        :param brand: Brand of the phone
+        :param brand: phone brand
         :param size_h: Height of the phone in mm
         :param size_w: Width of the phone in mm
         :param price: Price of the phone
         """
         self.brand = brand
-        self._size_h = None
         self.size_h = size_h
-        self._size_w = None
         self.size_w = size_w
-        self._price = None
         self.price = price
 
     @property
@@ -23,38 +20,46 @@ class MobPhone:
 
     @size_h.setter
     def size_h(self, value: int):
-        """Sets phone height within allowed range"""
+        """Sets phone height within allowed range
+
+        :param value: Height of the phone in mm
+        """
         if 100 <= value <= 180:
             self._size_h = value
         else:
-            pass
+            self._size_h = 120
 
     @property
     def size_w(self) -> int:
-        """Gets phone width"""
+        """Gets phone width."""
         return self._size_w
 
     @size_w.setter
     def size_w(self, value: int):
-        """Sets phone width within allowed range"""
+        """Sets phone width within allowed range
+
+        :param value: Width of the phone in mm
+        """
         if 20 <= value <= 120:
             self._size_w = value
         else:
-            pass
+            self._size_w = 60
 
     @property
     def price(self) -> float:
-        """Gets phone price"""
+        """Gets phone price."""
         return self._price
 
     @price.setter
     def price(self, value: float):
-        """Sets phone price if non-negative"""
+        """Sets phone price if non-negative
+
+        :param value: Price of the phone
+        """
         if value >= 0:
             self._price = value
         else:
-            pass
-
+            self._price = 0.0
     def getData(self) -> str:
         """
         Returns a formatted str with phone info
@@ -66,7 +71,7 @@ class MobPhone:
 
 
 p = MobPhone("Samsung", 160, 75, 800.0)
-p_2 = MobPhone("Apple", 55, 70, 1200.0) #checking with not true values
+p_2 = MobPhone("Apple", 55, 70, 500.0)
 
 print(p.getData())
 print(p_2.getData())
