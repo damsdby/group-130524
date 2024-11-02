@@ -15,7 +15,11 @@ class MobPhone:
 
     @property
     def size_h(self) -> int:
-        """Gets phone height"""
+        """
+        Gets phone height
+        :return: returns height in mm
+        """
+
         return self._size_h
 
     @size_h.setter
@@ -31,12 +35,16 @@ class MobPhone:
 
     @property
     def size_w(self) -> int:
-        """Gets phone widt"""
+        """
+        Gets phone widt
+        :return: phone width in mm
+        """
+
         return self._size_w
 
     @size_w.setter
     def size_w(self, value: int):
-        """Sets phone width within allowed range
+        """Sets phone width due to allowed range
 
         :param value: Width of the phone in mm
         """
@@ -47,7 +55,11 @@ class MobPhone:
 
     @property
     def price(self) -> float:
-        """Gets phone price"""
+        """
+        Gets phone price
+        :return: phone_price in dollars
+        """
+
         return self._price
 
     @price.setter
@@ -60,6 +72,7 @@ class MobPhone:
             self._price = value
         else:
             self._price = 0.0
+
     def getData(self) -> str:
         """
         Returns a formatted str with phone info
@@ -67,7 +80,6 @@ class MobPhone:
         :return: Formatted str with brand, size, and price
         """
         return f"Brand: {self.brand}, Size (HxW): {self.size_h}x{self.size_w} mm, Price: ${self.price}"
-
 
 
 p = MobPhone("Samsung", 160, 75, 800.0)
