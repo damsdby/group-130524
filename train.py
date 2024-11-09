@@ -94,7 +94,7 @@ def find_train_by_number(trains: list, num: int) -> str:
 
 train1 = Train(1, "Brovary", "Lviv", datetime(2024, 12, 1, 10, 0))
 train2 = Train(2, "Odessa", "Lviv", datetime(2024, 11, 10, 15, 0))
-train3 = Train(3, "Kyiv", "Odessa", datetime(2024, 11, 5, 9, 0))  # Will be adjusted to the current time
+train3 = Train(3, "Kyiv", "Odessa", datetime(2024, 11, 5, 9, 0))
 train4 = Train(4, "Kyiv", "Lviv", datetime(2024, 11, 20, 13, 0))
 train5 = Train(5, "Kharkiv", "Kyiv", datetime(2024, 11, 9, 11, 0))
 
