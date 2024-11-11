@@ -1,86 +1,92 @@
 from datetime import datetime
-from typing import List
+
 
 class Train:
     """
-    A class to represent a train with number, destination, start point, and departure time
+    A class to represent a train with number, destination, start point, and departure time.
     """
 
     def __init__(self, num: int, final_point: str, start_point: str, time: datetime):
         """
         Initialize the train with number, destination, start point, and departure time
-        If the time is in the past, set it to the current time.
-
-        :param num: Train num
-        :param final_point: final station
+        :param num: Train number
+        :param final_point: Final station
         :param start_point: Starting station
         :param time: Departure time
         """
         self._num = num
         self._final_point = final_point
         self._start_point = start_point
-        self._time = time if time > datetime.now() else self._set_future_time()
+        self.time = time
 
-    def _set_future_time(self):
+    @property
+    def time(self) -> datetime:
         """
-        Set the departure time to the current time if it's in the past
-
-        :return: Current date, time
+        Get the departure time of the train
+        :return: Departure time
         """
-        print(f"Departure time for Train #{self._num} cannot be in the past. Setting it to current time.")
-        return datetime.now()
+        return self._time
 
-    def info(self):
+    @time.setter
+    def time(self, time: datetime):
         """
-        Get train detail like number, route, and departure time.
+        Set the departure time if it is not in the past. If in the past, set to current time
+        :param time: Desired departure time
+        """
+        if time > datetime.now():
+            self._time = time
+        else:
+            print(f"Departure time for Train #{self._num} cannot be in the past. Setting it to current time.")
+            self._time = datetime.now()
 
+    def info(self) -> str:
+        """
+        Get train details like number, route, and departure time
         :return: Str with train details
         """
         return (f"Train #{self._num} from {self._start_point} to {self._final_point} departs at "
                 f"{self._time.strftime('%Y-%m-%d %H:%M:%S')}")
 
     @staticmethod
-    def number_sorter(train):
+    def number_sorter(train) -> int:
         """
-        Return the train number for sorting by number
-
+        says the train number for sorting by number
         :param train: Train object
         :return: Train number
         """
         return train._num
 
     @staticmethod
-    def destination_sorter(train):
+    def destination_sorter(train) -> tuple:
         """
-        Return destination and departure time for sorting by destination and time
-
+        says destination and departure time for sorting by destination and time.
         :param train: Train object
         :return: Tuple (destination, departure time)
         """
         return train._final_point, train._time
 
+
 def sort_trains_by_number(trains: list) -> list:
     """
     Sort list of trains by their number
-
     :param trains: list of Train objects
     :return: Sorted list of trains by number
     """
     return sorted(trains, key=Train.number_sorter)
 
+
 def sort_trains_by_destination(trains: list) -> list:
     """
     Sort list of trains by destination. If destinations are the same, sort by departure time
-
     :param trains: list of Train objects
     :return: Sorted list of trains by destination and time
     """
     return sorted(trains, key=Train.destination_sorter)
 
+
 def find_train_by_number(trains: list, num: int) -> str:
     """
     Find a train by number and return its details
-
     :param trains: list of Train objects
     :param num: Train number to search for
     :return: Train details or message if not found
@@ -89,7 +95,6 @@ def find_train_by_number(trains: list, num: int) -> str:
         if train._num == num:
             return train.info()
     return f"No train found with number {num}."
-
 
 
 train1 = Train(1, "Brovary", "Lviv", datetime(2024, 12, 1, 10, 0))
@@ -105,7 +110,6 @@ print("Trains sorted by number:")
 for train in sorted_by_number:
     print(train.info())
 
-
 sorted_by_destination = sort_trains_by_destination(trains)
 print("\nTrains sorted by destination and time:")
 for train in sorted_by_destination:
@@ -113,3 +117,4 @@ for train in sorted_by_destination:
 
 train_number = 106
 print("\n" + find_train_by_number(trains, train_number))
+
