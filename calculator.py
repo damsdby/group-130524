@@ -114,12 +114,12 @@ class Calculator:
 calculator = Calculator()
 
 
-calculator.add(4, 17)      # 4+17 = 21
-calculator.subtract(15, 5) # 15-5 = 10
-calculator.multiply(8, 3)  # 8*3 = 24
-calculator.divide(16, 4)   # 16/4 = 4
-calculator.quadrieren(7, 2)     # 7**2 = 49
-calculator.modulo(10, 3)   # 10%3 = 1
+calculator.add(4, 17)
+calculator.subtract(15, 5)
+calculator.multiply(8, 3)
+calculator.divide(16, 4)
+calculator.quadrieren(7, 2)
+calculator.modulo(10, 3)
 
 
 calculator.save_operations()
