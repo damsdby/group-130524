@@ -1,1 +1,7 @@
-# group-130524
+# group130524
+
+- python -m venv venv
+
+
+
+-Cntrl -Alt -l
